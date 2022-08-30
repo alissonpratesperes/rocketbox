@@ -5,10 +5,10 @@ const File = require('../models/File');
         async store(request, response) {
             const box = await Box.findById(
                 request.params.id
-                );
+            );
             const file = await File.create({
                 title: request.file.originalname,
-                path: request.file.key
+                    path: request.file.key
             });
                 box.files.push(file);
                     await box.save();
