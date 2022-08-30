@@ -2,8 +2,9 @@ const express = require('express');
 
 const app = express();
 
-    app.get('/', (request, response) => {
-        return response.send('Hello, World!');
-    });
-
+    app.use(express.json());
+    app.use(express.urlencoded({
+        extended: true
+    }));
+    app.use(require('./routes'));
     app.listen(3333);
