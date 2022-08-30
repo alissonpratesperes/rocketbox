@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const app = express();
 const server = require('http').Server(app);
@@ -16,6 +17,9 @@ const io = require('socket.io')(server);
             useNewUrlParser: true
         });
 
+            app.use(
+                cors()
+            );
             app.use(
                 (request, response, next) => {
                     request.io = io;
