@@ -2,8 +2,8 @@ const express= require('express');
 
 const routes = express.Router();
 
-    routes.get('/', (request, response) => {
-        return response.send('Hello, World! =)');
-    });
+const BoxController = require('./controllers/BoxController');
+
+    routes.post('/boxes', BoxController.store);
 
         module.exports = routes;
