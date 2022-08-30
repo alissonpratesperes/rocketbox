@@ -12,7 +12,13 @@ const File = require('../models/File');
             });
                 box.files.push(file);
                     await box.save();
-                        return response.json(file);
+                        request.io.sockets.in(
+                            box._id
+                        ).emit(
+                            'file',
+                            file
+                        );
+                            return response.json(file);
         }
     }
 
