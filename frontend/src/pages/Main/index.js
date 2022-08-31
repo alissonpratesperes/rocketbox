@@ -19,7 +19,7 @@ import api from '../../services/api';
                     const response = await api.post('/boxes', {
                         title: this.state.newBox
                     });
-                        console.log(response.data);
+                        this.props.history.push(`/boxes/${response.data._id}`);
             };
 
                 render() {
