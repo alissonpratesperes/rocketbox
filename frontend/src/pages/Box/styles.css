@@ -20,7 +20,7 @@ div#box_container header button svg {
 div#box_container header button:hover {
     opacity: 0.8;
 }
-div#box_container .upload {
+div#box_container div.upload {
     margin-top: 50px;
     padding: 30px 30px 30px 30px;
     text-align: center;
