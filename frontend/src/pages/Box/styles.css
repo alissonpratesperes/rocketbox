@@ -1,0 +1,59 @@
+div#box_container {
+    margin: 50px auto 0px auto;
+    max-width: 900px;
+}
+div#box_container header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+div#box_container header h1 {
+    margin-left: 15px;
+    padding-left: 15px;
+    font-size: 21px;
+    border-left: 2px solid #DDDDDD;
+}
+div#box_container header button svg {
+    margin-right: 10px;
+}
+div#box_container header button:hover {
+    opacity: 0.8;
+}
+div#box_container .upload {
+    margin-top: 50px;
+    padding: 30px 30px 30px 30px;
+    text-align: center;
+    color: #999999;
+    border: 2px dashed #DDDDDD;
+    border-radius: 4px;
+    cursor: pointer;
+}
+div#box_container ul {
+    margin: 30px 0px 30px 0px;
+    list-style: none;
+}
+div#box_container ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+div#box_container ul li + li {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid #EEEEEE;
+}
+div#box_container ul li .fileInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
+div#box_container ul li .fileInfo strong {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #333333;
+}
