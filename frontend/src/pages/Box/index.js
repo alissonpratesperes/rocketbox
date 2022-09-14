@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Dropzone from 'react-dropzone';
 import {distanceInWords} from 'date-fns';
 import pt from 'date-fns/locale/pt';
+import socket from 'socket.io-client';
 
 import {MdInsertDriveFile} from 'react-icons/md';
 import logo from '../../assets/logo.svg';
@@ -14,19 +15,36 @@ import api from '../../services/api';
         };
 
             async componentDidMount() {
-                const box = this.props.match.params.id;
-                const response = await api.get(`/boxes/${box}`);
-                    this.setState({
-                        box: response.data
-                    });
+                this.subscribeToNewFiles();
+                    const box = this.props.match.params.id;
+                    const response = await api.get(`/boxes/${box}`);
+                        this.setState({
+                            box: response.data
+                        });
             }
+            subscribeToNewFiles = () => {
+                const box = this.props.match.params.id;     
+                const io = socket('http://localhost:3333');
+                    io.emit('connectRoom', box);
+                        io.on('file', data => {
+                            this.setState({
+                                box: {
+                                    ...this.state.box,
+                                    files: [
+                                        data,
+                                        ...this.state.box.files
+                                    ]
+                                }
+                            });
+                        });
+            };
             handleUpload = (files) => {
-                    files.forEach((file) => {
-                        const box = this.props.match.params.id;
-                        const fileData = new FormData();
-                            fileData.append('file', file);
-                                api.post(`/boxes/${box}/files`, fileData);
-                    });
+                files.forEach((file) => {
+                    const box = this.props.match.params.id;
+                    const fileData = new FormData();
+                        fileData.append('file', file);
+                            api.post(`/boxes/${box}/files`, fileData);
+                });
             };
 
                 render() {
