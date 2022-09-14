@@ -5,10 +5,14 @@ const Box = require('../models/Box');
             const box = await Box.create(
                 request.body
             );
-                return response.json(box);
+                return response.json(
+                    box
+                );
         };
         async show(request, response) {
-            const box = await Box.findById(request.params.id).populate({
+            const box = await Box.findById(
+                request.params.id
+            ).populate({
                 path: 'files',
                     options: {
                         sort: {
@@ -16,7 +20,9 @@ const Box = require('../models/Box');
                         }
                     }
             });
-                return response.json(box);
+                return response.json(
+                    box
+                );
         };
     }
 

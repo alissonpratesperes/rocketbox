@@ -5,8 +5,14 @@ const cors = require('cors');
 
 const app = express();
 const server = require('http').Server(app);
-const options = {cors: true, origin: ['*:*']};
-const io = require('socket.io')(server, options);
+const options = {
+    cors: true,
+    origin: ['*:*']
+};
+const io = require('socket.io')(
+    server,
+    options
+);
 
     io.on('connection', socket => {
         socket.on('connectRoom', box => {
@@ -14,9 +20,12 @@ const io = require('socket.io')(server, options);
         });
     });
 
-        mongoose.connect('mongodb+srv://omnistack_dev:KcAtSiNm0O@mavericks.pwlbv.mongodb.net/omnistack6?retryWrites=true', {
-            useNewUrlParser: true
-        });
+        mongoose.connect(
+            'mongodb+srv://omnistack_dev:KcAtSiNm0O@mavericks.pwlbv.mongodb.net/omnistack6?retryWrites=true',
+                {
+                    useNewUrlParser: true
+                }
+        );
 
             app.use(
                 cors()
@@ -31,13 +40,17 @@ const io = require('socket.io')(server, options);
                 express.json()
             );
             app.use(
-                express.urlencoded({
-                    extended: true
-                })
+                express.urlencoded(
+                    {
+                        extended: true
+                    }
+                )
             );
             app.use(
                 '/files',
-                express.static(path.resolve(__dirname, '..', 'temp'))
+                    express.static(
+                        path.resolve(__dirname, '..', 'temp')
+                    )
             );
             app.use(
                 require('./routes')

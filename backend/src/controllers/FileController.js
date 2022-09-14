@@ -10,7 +10,9 @@ const File = require('../models/File');
                 title: request.file.originalname,
                     path: request.file.key
             });
-                box.files.push(file);
+                box.files.push(
+                    file
+                );
                     await box.save();
                         request.io.sockets.in(
                             box._id
@@ -18,7 +20,9 @@ const File = require('../models/File');
                             'file',
                             file
                         );
-                            return response.json(file);
+                            return response.json(
+                                file
+                            );
         }
     }
 
