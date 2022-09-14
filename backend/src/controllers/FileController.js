@@ -18,7 +18,7 @@ const File = require('../models/File');
                             box._id
                         ).emit(
                             'file',
-                            file
+                                file
                         );
                             return response.json(
                                 file
