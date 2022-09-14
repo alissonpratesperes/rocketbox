@@ -9,17 +9,22 @@ import api from '../../services/api';
             newBox: ''
         };
 
-            handleInputChange = (event) => {
+            handleInputChange = event => {
                 this.setState({
                     newBox: event.target.value
                 });
             };
-            handleSubmit = async (event) => {
+            handleSubmit = async event => {
                 event.preventDefault();
-                    const response = await api.post('/boxes', {
-                        title: this.state.newBox
-                    });
-                        this.props.history.push(`/boxes/${response.data._id}`);
+                    const response = await api.post(
+                        '/boxes',
+                            {
+                                title: this.state.newBox
+                            }
+                    );
+                        this.props.history.push(
+                            `/boxes/${response.data._id}`
+                        );
             };
 
                 render() {

@@ -17,33 +17,49 @@ import api from '../../services/api';
             async componentDidMount() {
                 this.subscribeToNewFiles();
                     const box = this.props.match.params.id;
-                    const response = await api.get(`/boxes/${box}`);
+                    const response = await api.get(
+                        `/boxes/${box}`
+                    );
                         this.setState({
                             box: response.data
                         });
             }
             subscribeToNewFiles = () => {
                 const box = this.props.match.params.id;     
-                const io = socket('http://localhost:3333');
-                    io.emit('connectRoom', box);
-                        io.on('file', data => {
-                            this.setState({
-                                box: {
-                                    ...this.state.box,
-                                    files: [
-                                        data,
-                                        ...this.state.box.files
-                                    ]
+                const io = socket(
+                    'http://localhost:3333'
+                );
+                    io.emit(
+                        'connectRoom',
+                            box
+                    );
+                        io.on(
+                            'file',
+                                data => {
+                                    this.setState({
+                                        box: {
+                                            ...this.state.box,
+                                                files: [
+                                                    data,
+                                                        ...this.state.box.files
+                                                ]
+                                        }
+                                    });
                                 }
-                            });
-                        });
+                        );
             };
-            handleUpload = (files) => {
-                files.forEach((file) => {
+            handleUpload = files => {
+                files.forEach(file => {
                     const box = this.props.match.params.id;
                     const fileData = new FormData();
-                        fileData.append('file', file);
-                            api.post(`/boxes/${box}/files`, fileData);
+                        fileData.append(
+                            'file',
+                                file
+                        );
+                            api.post(
+                                `/boxes/${box}/files`,
+                                    fileData
+                            );
                 });
             };
 
