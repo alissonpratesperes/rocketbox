@@ -8,7 +8,7 @@ import api from "../../services/api";
 
     export default class Main extends Component {
         state = {
-            newBox: ''
+            newBox: ""
         };
 
             async componentDidMount() {
