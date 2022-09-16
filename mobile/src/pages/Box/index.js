@@ -4,6 +4,8 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import {distanceInWords} from 'date-fns';
 import pt from 'date-fns/locale/pt';
+import * as ImagePicker from 'expo-image-picker';
+import socket from 'socket.io-client';
 
 import styles from "./styles";
 import api from "../../services/api";
@@ -14,14 +16,67 @@ import api from "../../services/api";
         };
 
             async componentDidMount() {
+                this.subscribeToNewFiles();
+                    const box = await AsyncStorage.getItem("@RocketBox:box");
+                    const response = await api.get(
+                        `/boxes/${box}`
+                    );
+                        this.setState({
+                            box: response.data
+                        });
+            };
+            subscribeToNewFiles = async () => {
                 const box = await AsyncStorage.getItem("@RocketBox:box");
-                const response = await api.get(
-                    `/boxes/${box}`
+                const io = socket(
+                    'http://192.168.1.101:3333'
                 );
-                    this.setState({
-                        box: response.data
-                    });
-            }
+                    io.emit(
+                        'connectRoom',
+                            box
+                    );
+                        io.on(
+                            "file",
+                                data => {
+                                    this.setState({
+                                        box: {
+                                            ...this.state.box,
+                                                files: [
+                                                    data,
+                                                        ...this.state.box.files
+                                                ]
+                                        }
+                                    });
+                                }
+                        );
+            };
+            handleUpload = async () => {
+                let uploadFile = await ImagePicker.launchImageLibraryAsync({
+                    mediaTypes: ImagePicker.MediaTypeOptions.Images
+                });
+                let prefix;
+                let ext;
+
+                    if(uploadFile.fileName) {
+                        [ prefix, suffix ] = uploadFile.fileName.split('.');
+                            ext = suffix.toLowerCase() === "heic" ? "jpg" : suffix;
+                    } else {
+                        prefix = new Date().getTime();
+                            ext = "jpg";
+                    }
+
+                        const uploadData = new FormData();
+                        
+                            uploadData.append("file", {
+                                uri: uploadFile.uri,
+                                    type: uploadFile.type,
+                                        name: `${prefix}.${ext}`
+                            });
+
+                                api.post(
+                                    `/boxes/${this.state.box._id}/files`,
+                                        uploadData
+                                );
+            };
             renderItem = ({ item }) => (
                 <TouchableOpacity
                     onPress={ () => {} }
@@ -49,7 +104,7 @@ import api from "../../services/api";
                 </TouchableOpacity>
             );
 
-                render() { 
+                render() {
                     return (
                         <SafeAreaView
                             style={ styles.container }
@@ -73,7 +128,7 @@ import api from "../../services/api";
                                     renderItem={ this.renderItem }
                                 />
                                     <TouchableOpacity
-                                        onPress={ () => {} }
+                                        onPress={ this.handleUpload }
                                         style={ styles.fab }
                                     >
                                         <Icon
@@ -84,5 +139,5 @@ import api from "../../services/api";
                                     </TouchableOpacity>
                         </SafeAreaView>
                     );
-                }
+                };
     };

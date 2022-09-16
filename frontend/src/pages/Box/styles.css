@@ -32,6 +32,7 @@ div#box_container div.upload {
 div#box_container ul {
     margin: 30px 0px 30px 0px;
     list-style: none;
+    border-bottom: 50px solid transparent;
 }
 div#box_container ul li {
     display: flex;
