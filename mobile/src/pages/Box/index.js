@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { SafeAreaView, View, FlatList, Text, TouchableOpacity } from "react-native";
+import { SafeAreaView, View, FlatList, Text, TouchableOpacity, StatusBar } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import {distanceInWords} from 'date-fns';
-import pt from 'date-fns/locale/pt';
-import * as ImagePicker from 'expo-image-picker';
-import socket from 'socket.io-client';
+import Icon from "react-native-vector-icons/MaterialIcons";
+import {distanceInWords} from "date-fns";
+import pt from "date-fns/locale/pt";
+import * as ImagePicker from "expo-image-picker";
+import socket from "socket.io-client";
 
 import styles from "./styles";
 import api from "../../services/api";
@@ -53,37 +53,45 @@ import api from "../../services/api";
                 let uploadFile = await ImagePicker.launchImageLibraryAsync({
                     mediaTypes: ImagePicker.MediaTypeOptions.Images
                 });
-                let prefix;
-                let ext;
 
-                    if(uploadFile.fileName) {
-                        [ prefix, suffix ] = uploadFile.fileName.split('.');
-                            ext = suffix.toLowerCase() === "heic" ? "jpg" : suffix;
+                    if(uploadFile.cancelled) {
+                        return;
                     } else {
-                        prefix = new Date().getTime();
-                            ext = "jpg";
-                    }
+                        let prefix;
+                        let ext;
 
-                        const uploadData = new FormData();
+                            if(uploadFile.fileName) {
+                                [ prefix, suffix ] = uploadFile.fileName.split('.');
+                                    ext = suffix.toLowerCase() === "heic" ? "jpg" : suffix;
+                            } else {
+                                prefix = new Date().getTime();
+                                    ext = "jpg";
+                            }
+
+                                const uploadData = new FormData();
                         
-                            uploadData.append("file", {
-                                uri: uploadFile.uri,
-                                    type: uploadFile.type,
-                                        name: `${prefix}.${ext}`
-                            });
+                                    uploadData.append(
+                                        "file", 
+                                            {
+                                                uri: uploadFile.uri,
+                                                    type: uploadFile.type,
+                                                        name: `${prefix}.${ext}`
+                                            }
+                                    );
 
-                                api.post(
-                                    `/boxes/${this.state.box._id}/files`,
-                                        uploadData
-                                );
+                                        api.post(
+                                            `/boxes/${this.state.box._id}/files`,
+                                                uploadData
+                                        );
+
+                    }              
             };
             renderItem = ({ item }) => (
-                <TouchableOpacity
-                    onPress={ () => {} }
-                    style={ styles.file }
+                <View
+                    style={styles.file}
                 >
                     <View
-                        style={ styles.fileInfo }
+                        style={styles.fileInfo}
                     >
                         <Icon
                             name="insert-drive-file"
@@ -91,52 +99,61 @@ import api from "../../services/api";
                             color="#A5CFFF"
                         />
                             <Text
-                                style={ styles.fileTitle }
+                                style={styles.fileTitle}
                             >
                                 {item.title}
                             </Text>
                     </View>
                         <Text
-                            style={ styles.fileDate }
+                            style={styles.fileDate}
                         >
-                            há {distanceInWords(item.createdAt, new Date(), {locale: pt})}
+                            há {
+                                distanceInWords(
+                                    item.createdAt,
+                                        new Date(),
+                                            {locale: pt}
+                                )
+                            }
                         </Text>
-                </TouchableOpacity>
+                </View>
             );
 
                 render() {
                     return (
                         <SafeAreaView
-                            style={ styles.container }
+                            style={styles.container}
                         >
-                            <Text
-                                style={ styles.boxTitle }
-                            >
-                                {this.state.box.title}
-                            </Text>
-                                <FlatList
-                                    style={ styles.list }
-                                    keyExtractor={file =>
-                                        file._id
-                                    }
-                                    data={this.state.box.files}
-                                    ItemSeparatorComponent={ () =>
-                                        <View
-                                            style={ styles.separator }
-                                        />
-                                    }
-                                    renderItem={ this.renderItem }
-                                />
-                                    <TouchableOpacity
-                                        onPress={ this.handleUpload }
-                                        style={ styles.fab }
-                                    >
-                                        <Icon
-                                            name="cloud-upload"
-                                            size={24}
-                                            color="#FFFFFF"
-                                        />
-                                    </TouchableOpacity>
+                            <StatusBar barStyle="dark-content"/>
+                                <Text
+                                    style={styles.boxTitle}
+                                >
+                                    {this.state.box.title}
+                                </Text>
+                                    <FlatList
+                                        style={styles.list}
+                                        keyExtractor={
+                                            file =>
+                                                file._id
+                                        }
+                                        data={this.state.box.files}
+                                        ItemSeparatorComponent={
+                                            () =>
+                                                <View
+                                                    style={styles.separator}
+                                                />
+                                        }
+                                        renderItem={this.renderItem}
+                                    />
+                                        <TouchableOpacity
+                                            onPress={this.handleUpload}
+                                            style={styles.fab}
+                                        >
+                                            <Icon
+                                                name="cloud-upload"
+                                                size={24}
+                                                color="#FFFFFF"
+                                            />
+                                        </TouchableOpacity>
                         </SafeAreaView>
                     );
                 };

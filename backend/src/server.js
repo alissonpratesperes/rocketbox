@@ -7,11 +7,11 @@ const app = express();
 const server = require('http').Server(app);
 const options = {
     cors: true,
-    origin: ['*:*']
+        origin: ['*:*']
 };
 const io = require('socket.io')(
     server,
-    options
+        options
 );
 
     io.on('connection', socket => {
