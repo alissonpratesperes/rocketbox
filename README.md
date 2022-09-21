@@ -21,3 +21,18 @@
     <a href="#memo-licença">Licença</a>
 </p>
     <br/>
+
+## :dart: Sobre
+A **RocketBox** é uma Aplicação inspirada no DropBox. Crie Boxes e compartilhe Arquivos diversos entre seu Computador e Smartphone em tempo real.
+
+## :battery: Tecnologias
+Essa Aplicação foi desenvolvida utilizando as seguintes tecnologias:
+
+- <a href="https://insomnia.rest/">Insomnia</a>
+- <a href="https://mongodb.com/">Mongo DB</a>
+- <a href="https://nodejs.org/">NodeJS</a>
+- <a href="https://socket.io/">Socket IO</a>
+- <a href="https://reactjs.org/">ReactJS</a>
+- <a href="https://axios-http.com/">Axios</a>
+- <a href="https://expo.dev/">Expo IO</a>
+- <a href="https://reactnative.dev/">React Native</a>
