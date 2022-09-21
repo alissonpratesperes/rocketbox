@@ -44,3 +44,7 @@ Essa Aplicação foi desenvolvida utilizando as seguintes tecnologias:
 ## :memo: Licença
 
 Esse projeto está sob a **Licença MIT**. Veja o arquivo [LICENSE](https://github.com/alissonpratesperes/rocketbox/blob/main/LICENSE) para mais detalhes.
+
+___
+
+<h5 align="center">  👨🏻‍💻&nbsp; &nbsp;com &nbsp;💜&nbsp;  por <a href="https://github.com/alissonpratesperes"> Alisson Prates Peres </a> &nbsp;✌🏻😗 </h5>
