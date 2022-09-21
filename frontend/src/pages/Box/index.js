@@ -27,7 +27,7 @@ import api from '../../services/api';
             subscribeToNewFiles = () => {
                 const box = this.props.match.params.id;     
                 const io = socket(
-                    'http://localhost:3333'
+                    'http://192.168.1.101:3333'
                 );
                     io.emit(
                         'connectRoom',
