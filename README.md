@@ -23,7 +23,7 @@
     <br/>
 
 ## :dart: Sobre
-A **RocketBox** é uma Aplicação inspirada no DropBox. Crie Boxes e compartilhe Arquivos diversos entre seu Computador e Smartphone em tempo real.
+A **RocketBox** é uma Aplicação inspirada no DropBox. Crie boxes e compartilhe arquivos diversos entre seu Computador e Smartphone em tempo real.
 
 ## :battery: Tecnologias
 Essa Aplicação foi desenvolvida utilizando as seguintes tecnologias:
@@ -36,3 +36,11 @@ Essa Aplicação foi desenvolvida utilizando as seguintes tecnologias:
 - <a href="https://axios-http.com/">Axios</a>
 - <a href="https://expo.dev/">Expo IO</a>
 - <a href="https://reactnative.dev/">React Native</a>
+
+## :fuelpump: Autor
+
+- Projeto desenvolvido durante a **Semana OmniStack 6** da <a href="https://rocketseat.com.br/">Rocketseat</a>, ocorrida em **Abril de 2019**.
+
+## :memo: Licença
+
+Esse projeto está sob a **Licença MIT**. Veja o arquivo [LICENSE](https://github.com/alissonpratesperes/rocketbox/blob/main/LICENSE) para mais detalhes.
