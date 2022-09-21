@@ -39,7 +39,7 @@ Essa Aplicação foi desenvolvida utilizando as seguintes tecnologias:
 
 ## :fuelpump: Autor
 
-- Projeto desenvolvido durante a **Semana OmniStack 6** da <a href="https://rocketseat.com.br/">Rocketseat</a>, ocorrida em **Abril de 2019**.
+Projeto desenvolvido durante a **Semana OmniStack 6** da <a href="https://rocketseat.com.br/">Rocketseat</a>, ocorrida em **Abril de 2019**.
 
 ## :memo: Licença
 
