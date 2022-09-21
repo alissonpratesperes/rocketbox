@@ -22,6 +22,8 @@
 </p>
     <br/>
 
+<p align="center"> <img src="github/rocketbox_dashboard.png" width="100%"> </p>
+
 ## :dart: Sobre
 A **RocketBox** é uma Aplicação inspirada no DropBox. Crie boxes e compartilhe arquivos diversos entre seu Computador e Smartphone em tempo real.
 
@@ -52,7 +54,7 @@ Essa Aplicação foi desenvolvida utilizando as seguintes tecnologias:
         |- "./mobile/node_modules/expo/AppEntry.js:3" - Alterar o diretório de inicialização do Expo para : "../../src/index";
         |- "./mobile/src/pages/Box/index.js:31" - Atualizar o Endereço de conexão dos WebSockets;
         |- "./mobile/src/services/api.js:4" - Alterar o Endereço de Conexão do Mobile;
-            >_ Inicializar o Mobile com o Comando: "expo start";
+            >_ Inicializar o Mobile com o Comando: "expo start".
 
 ## :fuelpump: Autor
 
