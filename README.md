@@ -40,19 +40,19 @@ Essa Aplicação foi desenvolvida utilizando as seguintes tecnologias:
 ## :electric_plug: Execute
 
 	- Clonar o Repositório;
-	- Instalar as Dependências do Back-End com o Comando: npm install;
+	- Instalar as Dependências do Back-End com o Comando: "npm install";
         |- "./backend/src/models/File.js:24" - Atualizar Endereço de IP de acesso aos arquivos pelo Express;
         |- "./backend/src/server.js:24" - Verificar URL de conexão com o MongoDB;
-            >_ Inicializar o Back-End com o Comando: npm run dev;
-    - Instalar as Dependências do Front-End com o Comando: npm install;
+            >_ Inicializar o Back-End com o Comando: "npm run dev";
+    - Instalar as Dependências do Front-End com o Comando: "npm install";
         |- "./frontend/src/pages/Box/index.js:30" - Atualizar o Endereço de conexão dos WebSockets;
         |- "./frontend/src/services/api.js:4" - Alterar o Endereço de Conexão do Front-End;
-            >_ Inicializar o Front-End com o Comando: npm start;
-    - Instalar as Dependências do Mobile com o Comando: npm install --force;
+            >_ Inicializar o Front-End com o Comando: "npm start";
+    - Instalar as Dependências do Mobile com o Comando: "npm install --force";
         |- "./mobile/node_modules/expo/AppEntry.js:3" - Alterar o diretório de inicialização do Expo para : "../../src/index";
         |- "./mobile/src/pages/Box/index.js:31" - Atualizar o Endereço de conexão dos WebSockets;
         |- "./mobile/src/services/api.js:4" - Alterar o Endereço de Conexão do Mobile;
-            >_ Inicializar o Mobile com o Comando: expo start;
+            >_ Inicializar o Mobile com o Comando: "expo start";
 
 ## :fuelpump: Autor
 
