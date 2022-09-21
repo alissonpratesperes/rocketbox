@@ -47,4 +47,4 @@ Esse projeto está sob a **Licença MIT**. Veja o arquivo [LICENSE](https://gith
 
 ___
 
-<h5 align="center"> 👨🏻‍💻&nbsp;com &nbsp;💜&nbsp; por <a href="https://github.com/alissonpratesperes">Alisson Prates Peres</a> &nbsp;✌🏻😗 </h5>
+<h5 align="center"> 👨🏻‍💻&nbsp;com &nbsp;💜&nbsp; por &nbsp; <a href="https://github.com/alissonpratesperes">Alisson Prates Peres</a> &nbsp;✌🏻😗 </h5>
