@@ -22,10 +22,7 @@
 </p>
     <br/>
 
-<p align="center">
-![Image 1](./github/vectors/localhost_3000__1440x920.png)
-![Image 2](./github/vectors/981ff39e8befe76775738f4f744116ad-1663730458829_IPhone6.jpg) 
-</p>
+|![rocketbox_frontend](./github/vectors/localhost_3000__1440x920.png)  | ![rocketbox_mobile](./github/vectors/981ff39e8befe76775738f4f744116ad-1663730458829_IPhone6.jpg) |
 
 ## :dart: Sobre
 A **RocketBox** é uma Aplicação inspirada no DropBox. Crie boxes e compartilhe arquivos diversos entre seu Computador e Smartphone em tempo real.
