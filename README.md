@@ -23,8 +23,8 @@
     <br/>
 
 <p align="center">
-<img src="./github/vectors/localhost_3000__1440x920.png" height="428.5px" align="left"/>
-<img src="./github\vectors\981ff39e8befe76775738f4f744116ad-1663730458829_IPhone6.jpg" height="428.5px" align="left"/>
+<img src="./github/vectors/localhost_3000__1440x920.png" style="float: left;"/>
+<img src="./github\vectors\981ff39e8befe76775738f4f744116ad-1663730458829_IPhone6.jpg" style="float: right;"/>
 </p>
 
 ## :dart: Sobre
