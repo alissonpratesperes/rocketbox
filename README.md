@@ -1,78 +1,75 @@
-﻿___
-<p align="center">
-    <img src="github/rocketbox_logo.svg" width="50%"/>
+﻿<p align="center">
+  <img src="./github/rocketbox-logo.svg" alt="rocketbox-logo" width="30%"/>
 </p>
-    <br/>
-<p align="center">
-    <img alt="Course Event" src="https://img.shields.io/badge/omnistack-week%206-%237159C1"/>
-    <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/alissonpratesperes/rocketbox?color=7159C1"/>
-        <a href="https://github.com/alissonpratesperes/rocketbox/search?l=javascript"><img alt="Top Language" src="https://img.shields.io/github/languages/top/alissonpratesperes/rocketbox?color=7159C1"/></a>
-    <img alt="GitHub Repository Size" src="https://img.shields.io/github/repo-size/alissonpratesperes/rocketbox?color=7159C1"/>
-    <img alt="GitHub Code Size" src="https://img.shields.io/github/languages/code-size/alissonpratesperes/rocketbox?color=7159C1"/>
-        <a href="https://github.com/alissonpratesperes/rocketbox/commits/main"><img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/alissonpratesperes/rocketbox?color=7159C1"/></a>
-        <a href ="https://github.com/alissonpratesperes/rocketbox/blob/main/LICENSE"><img alt="GitHub License" src="https://img.shields.io/badge/license-MIT-7159C1"/></a>
-</p>
-    </br>
-<p align="center">
-    <a href="#dart-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#battery-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#electric_plug-execute">Execute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#fuelpump-autor">Autor</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-    <a href="#memo-licença">Licença</a>
-</p>
-    <br/>
-
-<table width="100%">
-	<tr>
-		<td width="50%" valign="top">
-			<img src="github/vectors/localhost_3000__1440x920.png"/>
-		</td>
-		<td width="50%" valign="top">
-			<img src="github/vectors/981ff39e8befe76775738f4f744116ad-1663730458829_IPhone6.png"/>
-		</td>
-	</tr>
-</table>
-
-## :dart: Sobre
-A **RocketBox** é uma Aplicação inspirada no DropBox. Crie boxes e compartilhe arquivos diversos entre seu Computador e Smartphone em tempo real.
-
-## :battery: Tecnologias
-Essa Aplicação foi desenvolvida utilizando as seguintes tecnologias:
-
-- <a href="https://insomnia.rest/">Insomnia</a>
-- <a href="https://mongodb.com/">Mongo DB</a>
-- <a href="https://nodejs.org/">NodeJS</a>
-- <a href="https://socket.io/">Socket IO</a>
-- <a href="https://reactjs.org/">ReactJS</a>
-- <a href="https://axios-http.com/">Axios</a>
-- <a href="https://expo.dev/">Expo IO</a>
-- <a href="https://reactnative.dev/">React Native</a>
-
-## :electric_plug: Execute
-
-	- Clonar o Repositório;
-	- Instalar as Dependências do Back-End com o Comando: "npm install";
-        |- "./backend/src/models/File.js:24" - Atualizar Endereço de IP de acesso aos arquivos pelo Express;
-        |- "./backend/src/server.js:24" - Verificar URL de conexão com o MongoDB;
-            >_ Inicializar o Back-End com o Comando: "npm run dev";
-    - Instalar as Dependências do Front-End com o Comando: "npm install";
-        |- "./frontend/src/pages/Box/index.js:30" - Atualizar o Endereço de conexão dos WebSockets;
-        |- "./frontend/src/services/api.js:4" - Alterar o Endereço de Conexão do Front-End;
-            >_ Inicializar o Front-End com o Comando: "npm start";
-    - Instalar as Dependências do Mobile com o Comando: "npm install --force";
-        |- "./mobile/node_modules/expo/AppEntry.js:3" - Alterar o diretório de inicialização do Expo para : "../../src/index";
-        |- "./mobile/src/pages/Box/index.js:31" - Atualizar o Endereço de conexão dos WebSockets;
-        |- "./mobile/src/services/api.js:4" - Alterar o Endereço de Conexão do Mobile;
-            >_ Inicializar o Mobile com o Comando: "expo start".
-
-## :fuelpump: Autor
-
-Projeto desenvolvido durante a **Semana OmniStack 6** da <a href="https://rocketseat.com.br/">Rocketseat</a>, ocorrida em **Abril de 2019**.
-
-## :memo: Licença
-
-Esse projeto está sob a **Licença MIT**. Veja o arquivo [LICENSE](https://github.com/alissonpratesperes/rocketbox/blob/main/LICENSE) para mais detalhes.
 
 ___
 
-<h5 align="center">👨🏻‍💻&nbsp;com&nbsp;💜&nbsp;por&nbsp;<a href="https://github.com/alissonpratesperes">Alisson Prates Peres</a>&nbsp;✌🏻😗</h5>
+<br/>
+
+<p align="center">
+  <a href="#sobre">SOBRE</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#tecnologia">TECNOLOGIA</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#execute">EXECUTE</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#autor">AUTOR</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="#licença">LICENÇA</a>
+</p>
+
+<br/>
+
+<p align="center">
+  <img src="./github/rocketbox-dashboard.png" alt="rocketbox-dashboard" width="100%"/>
+</p>
+
+## SOBRE
+
+A **rocketbox** é uma Aplicação inspirada no DropBox crie boxes e compartilhe arquivos diversos entre seu Computador e Smartphone em tempo real
+
+## TECNOLOGIA
+
+  TOOLING
+
+<a href="https://insomnia.rest/">Insomnia</a><br/>
+<a href="https://mongodb.com/">MongoDB</a><br/>
+
+  BACK-END
+
+<a href="https://nodejs.org/">NodeJS</a><br/>
+<a href="https://socket.io/">Socket IO</a><br/>
+
+  FRONT-END
+
+<a href="https://axios-http.com/">Axios</a><br/>
+<a href="https://reactjs.org/">ReactJS</a><br/>
+
+  MOBILE
+
+<a href="https://expo.dev/">Expo IO</a><br/>
+<a href="https://reactnative.dev/">React Native</a><br/>
+
+## EXECUTE
+
+    - Clonar o Repositório
+    - Acessar o Back-End: "./backend"
+      |- Instalar as dependências com o Comando: "npm install --force"
+      |- Acessar o arquivo: "./backend/src/models/File.js:24" e atualizar Endereço de IP de acesso aos Arquivos
+      |- Acessar o arquivo: "./backend/src/server.js:24" e verificar URL de Conexão com o Banco de Dados
+        >_ Inicializar o Back-End com o Comando: "npm run dev"
+    - Acessar o Front-End: "./frontend"
+      |- Instalar as dependências com o Comando: "npm install --force"
+      |- Acessar o arquivo: "./frontend/src/pages/Box/index.js:30" e atualizar o Endereço de Conexão dos WebSockets
+      |- Acessar o arquivo: "./frontend/src/services/api.js:4" e atualizar o Endereço de Conexão do Front-End
+        >_ Inicializar o Front-End com o Comando: "npm start"
+    - Acessar o Mobile: "./mobile"
+      |- Instalar as dependências com o Comando: "npm install --force"
+      |- Acessar o arquivo: "./mobile/node_modules/expo/AppEntry.js:3" e atualizar o diretório de inicialização do Expo para: "../../src/index"
+      |- Acessar o arquivo: "./mobile/src/pages/Box/index.js:31" e atualizar o Endereço de Conexão dos WebSockets
+      |- Acessar o arquivo: "./mobile/src/services/api.js:4" e atualizar o Endereço de Conexão do Mobile
+        >_ Inicializar o Mobile com o Comando: "expo start"
+
+## AUTOR
+
+Projeto desenvolvido durante a **Semana OmniStack 06** da <a href="https://rocketseat.com.br/">Rocketseat</a> ocorrida em **Abril de 2019**
+
+## LICENÇA
+
+Esse projeto está sob a **Licença MIT** veja o arquivo [LICENSE](https://github.com/alissonpratesperes/rocketbox/blob/main/LICENSE) para mais detalhes
+
+___
+
+<p align="center">✍🏻&nbsp;with&nbsp;❤️&nbsp;by&nbsp;<a href="https://github.com/alissonpratesperes">me</a>&nbsp👨🏻‍💻</p>
