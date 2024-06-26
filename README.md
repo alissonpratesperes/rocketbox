@@ -26,7 +26,7 @@ A **rocketbox** é uma Aplicação inspirada no DropBox crie boxes e compartilhe
 
   DATABASE | <a href="https://mongodb.com/">MongoDB</a>
 
-  INTEGRATION | <a href="https://socket.io/">Socket IO</a> • <a href="https://axios-http.com/">Axios</a>
+  INTEGRATION | <a href="https://expressjs.com/">Express</a> • <a href="https://axios-http.com/">Axios</a> • <a href="https://socket.io/">Socket IO</a>
 
   BACK-END | <a href="https://nodejs.org/">NodeJS</a>
 
