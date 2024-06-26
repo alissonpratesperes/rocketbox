@@ -22,17 +22,17 @@ A **rocketbox** é uma Aplicação inspirada no DropBox crie boxes e compartilhe
 
 ## TECNOLOGIA
 
-  TOOLING | <a href="https://insomnia.rest/">Insomnia</a> • <a href="https://expo.dev/">Expo IO</a>
+TOOLING | <a href="https://insomnia.rest/">Insomnia</a> • <a href="https://expo.dev/">Expo IO</a>
 
-  DATABASE | <a href="https://mongodb.com/">MongoDB</a>
+DATABASE | <a href="https://mongodb.com/">MongoDB</a>
 
-  INTEGRATION | <a href="https://expressjs.com/">Express</a> • <a href="https://axios-http.com/">Axios</a> • <a href="https://socket.io/">Socket IO</a>
+INTEGRATION | <a href="https://expressjs.com/">Express</a> • <a href="https://axios-http.com/">Axios</a> • <a href="https://socket.io/">Socket IO</a>
 
-  BACK-END | <a href="https://nodejs.org/">NodeJS</a>
+BACK-END | <a href="https://nodejs.org/">NodeJS</a>
 
-  FRONT-END | <a href="https://reactjs.org/">ReactJS</a>
+FRONT-END | <a href="https://reactjs.org/">ReactJS</a>
 
-  MOBILE | <a href="https://reactnative.dev/">React Native</a>
+MOBILE | <a href="https://reactnative.dev/">React Native</a>
 
 ## EXECUTE
 
@@ -56,7 +56,7 @@ A **rocketbox** é uma Aplicação inspirada no DropBox crie boxes e compartilhe
 
 ## AUTOR
 
-Projeto desenvolvido durante a **Semana OmniStack 06** da <a href="https://rocketseat.com.br/">Rocketseat</a> ocorrida em **Abril de 2019**
+Projeto desenvolvido durante a **Omni Stack Week 06** da <a href="https://rocketseat.com.br/">Rocketseat</a> ocorrida em **Abril de 2019**
 
 ## LICENÇA
 
