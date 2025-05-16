@@ -35,7 +35,7 @@ A **rocketbox** é uma Aplicação inspirada no DropBox, crie boxes e compartilh
   <summary><strong>Database</strong></summary>
 
   <ul>
-    <li><a href="https://mongodb.com/">MongoDB</a></li>
+    <li><a href="https://mongodb.com/">Mongo DB</a></li>
   </ul>
 </details>
 
